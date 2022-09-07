@@ -2,19 +2,10 @@
 Perhaps you have used the popular cliche: "Life is is too short to engage in mundane trivialities!"
 What if you can know the number of days you have already spent and  the number of days you have left on planet earth,
 would such information motivate or scare the crap out of you? ...
-"""
-__        __   _                            _        
-\ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  
- \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \ 
-  \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |
-   \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/ 
-                                                     
- __  __            _        _                      _            
-|  \/  | ___  _ __| |_ __ _| | ___  _ __ ___   ___| |_ ___ _ __ 
-| |\/| |/ _ \| '__| __/ _` | |/ _ \| '_ ` _ \ / _ \ __/ _ \ '__|
-| |  | | (_) | |  | || (_| | | (_) | | | | | |  __/ ||  __/ |   
-|_|  |_|\___/|_|   \__\__,_|_|\___/|_| |_| |_|\___|\__\___|_| 
-"""
+
+
+
+![](./image/mortal.png)
 
 
 ## How to use:
