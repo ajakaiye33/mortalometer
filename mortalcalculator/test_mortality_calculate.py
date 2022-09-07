@@ -22,8 +22,8 @@ def fix_country_life_span_data(
         head_data = [t.text for t in head_col]
         body_data = grant_table.find("tbody").find("tr")
         fishy = []
-        for i, num in enumerate(body_data):
-            print(f"extracting country details from row {i}")
+        for _, num in enumerate(body_data):
+            #print(f"extracting country details from row {_}")
             dey = [j.text for j in num.find("td")]
             fishy.append(dey)
         big_data = pd.DataFrame(data=fishy, columns=head_data)
