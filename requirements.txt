@@ -1,0 +1,12 @@
+pandas==1.4.3
+tqdm==4.64.0
+gazpacho==1.1
+black==22.6.0
+pylint==2.15.0
+loguru==0.6.0
+macrodatabase==1.0.3
+fire==0.4.0
+pyfiglet==0.8.post1
+rich==12.5.1
+termcolor==1.1.0
+pytest==7.1.3
