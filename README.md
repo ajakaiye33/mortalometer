@@ -1,3 +1,5 @@
+[![Mortalometer App](https://github.com/ajakaiye33/mortalometer/actions/workflows/main.yml/badge.svg)](https://github.com/ajakaiye33/mortalometer/actions/workflows/main.yml)
+
 ## Introduction
 Probably you have heared or use the popular cliche: "Life is too short to engage in mundane trivialities!"
 What if you can know the number of days you have already spent and the number of days you have left on planet earth,
