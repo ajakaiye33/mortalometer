@@ -81,7 +81,7 @@ class Age:
         """
         # logger.info('Calculating remaing and spent days')
         age_in_days = self.age * 365
-        avg_life_span = life_span.loc[self.country.capitalize(), self.sex.capitalize()]
+        avg_life_span = life_span.loc[self.country.title(), self.sex.capitalize()]
         remaining_days = self.terminal_age - self.age
         remaining_days = remaining_days * 365
         console.print(
