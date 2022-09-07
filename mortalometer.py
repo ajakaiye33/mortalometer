@@ -1,3 +1,7 @@
+"""
+Created on Wed Sep 07 16:20:01 2022
+@author: Hedgar Ajakaiye
+"""
 from loguru import logger
 import time
 import fire

@@ -1,3 +1,7 @@
+"""
+Created on Wed Sep 07 16:20:01 2022
+@author: Hedgar Ajakaiye
+"""
 from urllib.error import URLError
 import pandas as pd
 from gazpacho import get, Soup
