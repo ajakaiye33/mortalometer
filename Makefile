@@ -11,6 +11,9 @@ lint:   #lint code
 test:
 	#test
 	pytest mortalcalculator/test_mortality_calculate.py 
+clean:
+	#clean caches
+	rm -rf __pycache__ .pytest_cache
 build:
 	#build container
 	#docker build -t deploy-fastapi .
@@ -19,6 +22,4 @@ run:
 	#docker run -p 127.0.01:8080:8080 cla36
 deploy:
 	#deploy
-all:
-	#run all
-	install format lint test 
+all:install format lint test clean

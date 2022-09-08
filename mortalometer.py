@@ -38,13 +38,15 @@ def main(name="Spencer", age=45, terminal_age=98, country="Jamaica", sex="Male")
         person = Age(
             name=name, age=age, terminal_age=terminal_age, country=country, sex=sex
         )
-        if isinstance(name,str):
+        if isinstance(name, str):
             name = name.upper()
-        if isinstance(country,str):
+        if isinstance(country, str):
             country = country.title()
         person.remaining_days_on_earth()
     except KeyError:
-        logger.exception("Thats an invalid input, try 'python mortalometer.py --help' for help")
+        logger.exception(
+            "Thats an invalid input, try 'python mortalometer.py --help' for help"
+        )
 
 
 if __name__ == "__main__":
