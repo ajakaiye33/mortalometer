@@ -7,7 +7,7 @@ format:
 	#format code
 	black *.py mortalcalculator/*.py
 lint:   #lint code
-	pylint --disable=R,C *.py mortalcalculator/*.py
+	pylint --disable=R,C,W0621 *.py mortalcalculator/*.py
 test:
 	#test
 	pytest mortalcalculator/test_mortality_calculate.py 
