@@ -27,6 +27,7 @@ def fix_country_life_span_data(
             fishy.append(dey)
         big_data = pd.DataFrame(data=fishy, columns=head_data)
         big_data = big_data.drop(["#"], axis=1)
+        big_data['Country'] = big_data['Country'].str.upper()
         big_data = big_data.set_index("Country")
         big_data = big_data.rename(columns={"Females": "Female", "Males": "Male"})
         big_data["Female"] = big_data["Female"].astype("float64")
@@ -57,6 +58,26 @@ def test_male_female_col_data_type(fix_country_life_span_data):
     assert isinstance(female_col, float)
     male_col = fix_country_life_span_data["Male"][0]
     assert isinstance(male_col, float)
+
+def test_country_upper_case(fix_country_life_span_data):
+    index_case = fix_country_life_span_data.index.to_list()
+    assert "singapore" not in index_case
+
+#@pytest.fixture
+def test_call_main_code(name ="Spencer", age =45, terminal_age =98, country ='unitedstates', sex="Male"):
+    zyu = country.split(' ')
+    gyu = country.upper()
+    assert isinstance(zyu,list)
+    assert  len(zyu) != 2
+    assert gyu == 'UNITEDSTATES'
+    assert isinstance(gyu,str)
+    assert isinstance(name,str)
+    assert not isinstance(age,str)
+    assert isinstance(sex,str)
+    assert isinstance(terminal_age,int)
+
+    
+
 
 
 def test_age():

@@ -15,7 +15,7 @@ print(colored(fyi.renderText("Welcome to Mortalometer"), "blue"))
 time.sleep(2)
 
 
-def main(name="Spencer", age=45, terminal_age=98, country="Jamaica", sex="Male"):
+def main(name:str ="Spencer", age:int =45, terminal_age:int =98, country:str="Jamaica", sex:str="Male") -> None:
 
     """
     Description
@@ -41,11 +41,18 @@ def main(name="Spencer", age=45, terminal_age=98, country="Jamaica", sex="Male")
         if isinstance(name, str):
             name = name.upper()
         if isinstance(country, str):
-            country = country.title()
+            country = country.upper()
+        
+        print("########## Your Details #############")
+        print("")
+        print("")
+        print(f"Age:{person.see_age} | Name:{person.see_name.capitalize()} | Sex:{person.see_sex.capitalize()} | Terminal-age:{person.see_terminal_age} | Country:{person.see_country.capitalize()}")
+        print("")
+        print("")
         person.remaining_days_on_earth()
     except KeyError:
         logger.exception(
-            "Thats an invalid input, try 'python mortalometer.py --help' for help"
+            "Thats an invalid input, try 'python mortalometer.py --help' for help. country names must be string type or within inverted commas e.g  'united states'"
         )
 
 

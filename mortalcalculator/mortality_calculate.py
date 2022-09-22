@@ -45,6 +45,7 @@ def country_life_span_data(url: str) -> pd.DataFrame:
             fishy.append(dey)
         big_data = pd.DataFrame(data=fishy, columns=head_data)
         big_data = big_data.drop(["#"], axis=1)
+        big_data['Country'] = big_data['Country'].str.upper()
         big_data = big_data.set_index("Country")
         big_data = big_data.rename(columns={"Females": "Female", "Males": "Male"})
         big_data["Female"] = big_data["Female"].astype("float64")
@@ -67,6 +68,35 @@ class Age:
     sex: str
     country: str
 
+    #def __init__(self,age,name,terminal_age,sex,country) -> None:
+    #    self.age = age
+    #    self.name = name
+    #    self.terminal_age = terminal_age
+    #    self.sex = sex
+    #    self.country = country
+
+
+    #some getters
+
+    @property
+    def see_age(self):
+        return self.age
+    @property    
+    def see_name(self):
+        return self.name
+
+    @property
+    def see_terminal_age(self):
+        return self.terminal_age
+
+    @property
+    def see_sex(self):
+        return self.sex
+
+    @property
+    def see_country(self):
+        return self.country
+
     def remaining_days_on_earth(self):
         """
         Description
@@ -81,7 +111,7 @@ class Age:
         """
         # logger.info('Calculating remaing and spent days')
         age_in_days = self.age * 365
-        avg_life_span = life_span.loc[self.country.title(), self.sex.capitalize()]
+        avg_life_span = life_span.loc[self.country.upper(), self.sex.capitalize()]
         remaining_days = self.terminal_age - self.age
         remaining_days = remaining_days * 365
         console.print(
